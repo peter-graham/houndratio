@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Hound Ratio Calculator</title>
+        <style>
+          body {
+            background-color: linen;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          label {
+            font-weight: bold;
+            font-size: 1.2em;
+          }
+
+          span{
+            font-family: monospace;
+            font-size: 2em;
+          }
+
+          input {
+            font-family: monospace;
+            font-size: 1.5em;
+          }
+          
+          h1 {
+            color: maroon;
+          }
+          </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="script.js"></script>
+        <h1>Hound Ratio</h1>
+        <p>A calculation for the price per unit of alcohol. Lower is better.</p>
+        <p>
+            <label for="price">Price (£):</label>
+            <input type="text" class="textinput" id="price" name="price" placeholder="5.00" onkeyup="calculateTotal()" onkeypress="javascript:return isNumber(event)" />
+        </p>
+        <p>
+            <label for="abvpercentage">ABV (%):</label>
+            <input type="text" class="textinput" id="abvpercentage" name="abvpercentage" placeholder="12.5" onkeyup="calculateTotal()" onkeypress="javascript:return isNumber(event)" />
+        </p>
+        <p>
+            <label for="size">Size (ml):</label>
+            <input type="text" class="textinput" id="sizeinml" name="sizeinml" placeholder="700" onkeyup="calculateTotal()" onkeypress="javascript:return isNumber(event)" />
+        </p>
+        <p>
+            <label for="units">Units:</label>
+            <span id="units">&nbsp;</span>
+        </p>
+        <p>
+            <label for="priceperunit">Price Per Unit:</label>
+            <span id="priceperunit">&nbsp;</span>
+        </p>
+    </body>
+</html>
